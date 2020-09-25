@@ -14,12 +14,13 @@ const db = mongoose.connection
 
 // asd.create({asd: 111})
 
-// const coll = db.collection('testowa')
+const coll = db.collection('testowa')
 db.once('open', () => console.log('connected to db'))
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
     console.log()
+    console.log(coll.find())
 })
 
 
