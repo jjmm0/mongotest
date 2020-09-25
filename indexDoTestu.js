@@ -20,6 +20,7 @@ db.once('open', () => console.log('connected to db'))
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
     console.log()
+    //coll find nie zwraca moich danych
     console.log(coll.find())
 })
 
